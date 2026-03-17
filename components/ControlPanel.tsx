@@ -137,7 +137,7 @@ function SwatchRow({
 }
 
 export default function ControlPanel({ effect, onUpdate }: Props) {
-  const s = effect.settings as Record<string, unknown>;
+  const s = effect.settings as unknown as Record<string, unknown>;
   const p = { s, onUpdate };
 
   if (effect.id === "stripeWedge") return (
